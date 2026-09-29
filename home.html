@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="style_index.css">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- custom Javascript -->
+    <script src="navigation.js"></script>
+
+    <!-- Bootstrap 5 Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rufina:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div style="background-color: #233000;" class="section-one">
+        <section class=" mx-5">
+            <nav class="navbar position-fixed w-100 top-0 end-0  p-3 col-lg-12"
+                style="background-color: #233000; z-index: 999; box-shadow: 2px 2px 10px #ffffff1a">
+                <div class=" d-flex container-fluid justify-content-between w-100 row-gap-4">
+                    <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-6 d-flex justify-content-between align-items-center">
+                            <div class="col-6 col-lg-12">
+                                <div class="navbar-brand w-75" href="#"><img src="assets/icons/home_icons/Logo.png"
+                                        class="w-75" alt="Food zero logo"></div>
+                            </div>
+
+                            <!-- The overlay -->
+                            <div id="myNav" class="overlay h-100">
+                                <div class="overlayer h-100">
+
+                                    <!-- Button to close the overlay navigation -->
+                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                                    <!-- Overlay content -->
+                                    <div class="h-100">
+                                        <div
+                                            class="overlay-content d-flex flex-column flex-lg-row align-items-center justify-content-evenly justify-content-lg-between h-100 w-75 m-auto ">
+                                            <ul>
+                                                <li class="text-uppercase fw-bold "><a href="/home.html"
+                                                        class="text-white">Home</a>
+                                                </li>
+                                                <li href="#" class="text-uppercase fw-bold">Menu</li>
+                                                <li href="#" class="text-uppercase text-warning fw-bold"> Blogs</li>
+                                                <div class="d-flex flex-column align-items-start">
+                                                    <p class="m-0 text-white fw-bold">1 column</p>
+                                                    <p class="m-0 text-white fw-bold">2 column</p>
+                                                    <p class="m-0 text-white fw-bold">Sidebar post</p>
+                                                </div>
+                                                <li href="#" class="text-uppercase fw-bold">Post</li>
+                                                <li href="#" class="text-uppercase fw-bold">Contact</li>
+                                            </ul>
+                                            <div class="d-flex flex-column align-items-start">
+                                                <h3 class="pe-5 w-100"
+                                                    style="font-size: 30px; color: #f1f1f1;  border-bottom: 3px; border-bottom-style: dotted;">
+                                                    Contact</h3>
+                                                <div class="w-100 d-flex flex-column">
+                                                    <a href="tel:+86 852 346 000"
+                                                        class="text-decoration-none text-white fs-5 text-center"
+                                                        style="font-family: 'Inter', sans-serif;">+86 852
+                                                        346 000</a>
+                                                    <a href="mailto:info@foodzero.com"
+                                                        class="fs-5 text-white">info@foodzero.com</a>
+
+                                                    <address class="fs-5 text-center text-white">1959 Sepulveda Blvd.
+                                                        <br>
+                                                        Culver City, CA, 90230
+                                                    </address>
+                                                    <div class="d-flex">
+                                                        <a href="#"><img
+                                                                src="assets/icons/home_icons/Icon_instagram.png"
+                                                                alt="instagram icon"></a>
+                                                        <a href="#"><img src="assets/icons/home_icons/Icon_twitter.png"
+                                                                alt="twitter icon"></a>
+                                                        <a href="#"><img src="assets/icons/home_icons/Icon_facebook.png"
+                                                                alt="facebook icon"></a>
+                                                        <a href="#"><img src="assets/icons/home_icons/Icon_youtube.png"
+                                                                alt="YouTube icon"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Use any element to open/show the overlay navigation menu -->
+                            <span onclick="openNav()" class="col-lg-12 navbar-dark"><button class="navbar-toggler"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                                    aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon" style="color: white;"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-5 align-items-center justify-content-between text-white col-12 col-lg-6">
+                        <a href="tel:+86 852 346 000" class="text-decoration-none text-white"
+                            style="font-family: 'Inter', sans-serif;">+86 852 346 000</a>
+                        <button class="btn btn-outline-light rounded-0 p-2 py-3 col-5"
+                            type="submit">Reservations</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="d-flex flex-column position-relative justify-content-between p-3"
+                style="padding-top: 8rem !important;">
+                <div class="position-absolute">
+                    <h1 class=" text-white fs-1 col-7 ">Healthy Eating
+                        is important
+                        part of lifestyle</h1>
+                    <p class="col-12 col-lg-3 text-white" style="font-family: 'Lato', sans-serif; letter-spacing: 2%;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+
+                </div>
+                <div class="ms-auto pt-lg-5 w-50"><img src="assets/images/home_img/hero image.png"
+                        alt="Cooked meat in a ceramic plate" class="mt-5 col-12 w-100">
+                </div>
+                <div class=" position-absolute" style="rotate: 90deg; text-align: left; left: -12rem; bottom: 10rem;">
+                    <h5 class="fs-2 text-white">Scroll -------------------------</h5>
+                </div>
+                <div class="d-flex position-absolute gap-4 bottom-0 col-5" style="right: 23rem;">
+                    <img class="col-4" src="assets/images/home_img/spices1.png" alt="">
+                    <img class="col-4" src="assets/images/home_img/spices2.png" alt="">
+                    <img class="col-4" src="assets/images/home_img/spices3.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-5 mt-5">
+            <div class="d-flex justify-content-between container-fluid flex-column flex-lg-row pt-5 p-3">
+                <div class="col-12 col-lg-5 d-flex flex-column gap-lg-4 gap-2">
+                    <img src="assets/images/home_img/Image (3).png" alt="Clam and vegetable soup in white ceramic bowl" class="w-100">
+                    <h3 class="fs-2 text-white fw-bold col-12 col-lg-7" style="font-size: 40px !important;">Start to plan your diet today</h3>
+                    <p class="col-12 col-lg-9 text-white" style="font-family: 'Lato', sans-serif; letter-spacing: 2%;">
+                        Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                </div>
+                <div class="col-12 col-lg-5 d-flex flex-lg-column flex-column-reverse align-items-lg-end mt-lg-0 mt-5">
+                    <p class="col-12 col-lg-9 text-white" style="font-family: 'Lato', sans-serif; letter-spacing: 2%;">
+                        Lorem
+                        ipsum dolor sit
+                        amet, consectetur adipiscing elit. Neque congue arcu</p>
+                    <img class="w-75" src="assets/images/home_img/Image (4).png" alt="Two black pepper and salt grinders">
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
