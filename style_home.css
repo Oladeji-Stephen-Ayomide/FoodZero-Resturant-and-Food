@@ -12,3 +12,5 @@ p, span {
 .position-absolute .fs-1 {
     font-size: calc(5rem + 1.5vw) !important;
 }
+
+::placeholder {color: #fff !important;}
