@@ -71,3 +71,49 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
+
+
+
+
+let currentPage = 1;
+const totalPages = 3; // Total number of custom content blocks you created
+
+function changePage(target) {
+    // Determine target page index value
+    if (target === 'prev') {
+        if (currentPage > 1) currentPage--;
+    } else if (target === 'next') {
+        if (currentPage < totalPages) currentPage++;
+    } else {
+        currentPage = target;
+    }
+
+    // 1. Hide all blog page elements and show only the target page
+    document.querySelectorAll('.blog-page-group').forEach(group => {
+        group.classList.add('d-none');
+    });
+    document.getElementById(`blog-page-${currentPage}`).classList.remove('d-none');
+
+    // 2. Clear old 'active' states on the numerical buttons and highlight the target element
+    document.querySelectorAll('.page-num').forEach(item => {
+        item.classList.remove('active');
+        const link = item.querySelector('.page-link');
+        if (link) link.className = "page-link text-dark border-dark px-3 py-2 rounded-0";
+    });
+
+    const activeItem = document.querySelector(`.page-num[data-page="${currentPage}"]`);
+    if (activeItem) {
+        activeItem.classList.add('active');
+        const activeLink = activeItem.querySelector('.page-link');
+        if (activeLink) activeLink.className = "page-link bg-dark text-white border-dark px-3 py-2 rounded-0";
+    }
+
+    // 3. Disable/Enable visibility flags on your Edge Navigation elements
+    document.getElementById('prev-btn').classList.toggle('disabled', currentPage === 1);
+    document.getElementById('next-btn').classList.toggle('disabled', currentPage === totalPages);
+}
+
+// Run pagination logic on start to establish structural edge buttons layout tracking state
+document.addEventListener("DOMContentLoaded", () => {
+    changePage(1);
+});

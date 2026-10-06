@@ -15,6 +15,6 @@ p, span {
 
 ::placeholder {color: #fff !important;}
 
-.map a:hover, :active{
+.map a:hover, a:active{
     color: #fff !important;
 }
