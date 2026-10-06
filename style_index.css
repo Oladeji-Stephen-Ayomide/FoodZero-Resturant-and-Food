@@ -48,6 +48,7 @@ body {
 .overlay li {
     /* padding: 8px; */
     font-size: 36px;
+    cursor: pointer;
     color: #f1f1f1;
     text-align: left;
 }
@@ -74,9 +75,9 @@ body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay li:hover,
+.overlay a:hover, .overlay li:hover, 
 .overlay a:hover, .overlay li:focus {
-    color: #f1f1f1;
+    color:  #ffc107!important;
 }
 
 /* Position the close button (top right corner) */

@@ -14,3 +14,7 @@ p, span {
 }
 
 ::placeholder {color: #fff !important;}
+
+.map a:hover, :active{
+    color: #fff !important;
+}
