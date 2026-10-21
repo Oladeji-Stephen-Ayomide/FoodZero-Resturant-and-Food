@@ -93,3 +93,90 @@
         transition: none !important;
     }
 }
+
+
+/* Core helper to hide elements initially */
+.reveal-on-scroll {
+    opacity: 0;
+    will-change: transform, opacity;
+    
+    /* FAST EXIT: When scrolling away, everyone clears out quickly together */
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in;
+}
+
+/* Base starting position */
+.reveal-on-scroll.slide-up {
+    transform: translateY(60px);
+}
+
+/* ==========================================================
+   THE TRIGGER STATE + STAGGER MATHEMATICS
+   ========================================================== */
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+    
+    /* SMOOTH ENTRANCE: When scrolling down to the cards */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease-out;
+    
+    /* 
+      Calculates transition-delay dynamically:
+      Card 1 (--delay: 1) -> (1 - 1) * 150ms = 0ms delay (Instantly)
+      Card 2 (--delay: 2) -> (2 - 1) * 150ms = 150ms delay
+      Card 3 (--delay: 3) -> (3 - 1) * 150ms = 300ms delay
+    */
+    transition-delay: calc((var(--delay, 1) - 1) * 150ms);
+}
+
+/* Accessibility: No movement if user turns it off in system settings */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        transition-delay: 0ms !important;
+    }
+}
+
+
+
+
+
+/* FOR CARD STAGGER ANIMATION: */
+/* Brand new core wrapper class */
+.stagger-card {
+    opacity: 0;
+    will-change: transform, opacity;
+
+    /* Fast exit transition when you scroll back up away from them */
+    transition: transform 0.4s ease-in, opacity 0.4s ease-in;
+}
+
+/* Brand new direction variant name */
+.stagger-card.cascade-up {
+    transform: translateY(55px);
+}
+
+/* ==========================================================
+   NEW ACTIVATION STATE & SEQUENTIAL TIMING
+   ========================================================== */
+.stagger-card.is-active {
+    opacity: 1;
+    transform: translateY(0);
+
+    /* Smooth entry animation curve when scrolling down into view */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease-out;
+
+    /* Calculates timing dynamically using your new variable name (--index) */
+    transition-delay: calc((var(--index, 1) - 1) * 150ms);
+}
+
+/* System accessibility compliance */
+@media (prefers-reduced-motion: reduce) {
+    .stagger-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        transition-delay: 0ms !important;
+    }
+}

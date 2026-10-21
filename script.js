@@ -144,3 +144,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Watch all target elements
     hiddenElements.forEach(el => observer.observe(el));
 });
+
+
+
+
+// FOR CARD STAGGER
+document.addEventListener("DOMContentLoaded", () => {
+    // Looks specifically for your new staggered items
+    const cascadeElements = document.querySelectorAll('.stagger-card');
+
+    const cascadeOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Fires when 15% of the element clears the viewport border
+    };
+
+    const cascadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Scrolled into view -> Add your new trigger class
+                entry.target.classList.add('is-active');
+            } else {
+                // Scrolled out of view -> Reset the animation smoothly
+                entry.target.classList.remove('is-active');
+            }
+        });
+    }, cascadeOptions);
+
+    // Track the new items
+    cascadeElements.forEach(el => cascadeObserver.observe(el));
+});
