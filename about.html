@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About || Foodzero</title>
+    <link rel="shortcut icon" href="assets/icons/home_icons/favicon.png">
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="about.css">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- custom Javascript -->
+    <script src="script.js"></script>
+
+    <!-- Bootstrap 5 Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rufina:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div
+        style=" background-image: url('assets/images/about_img/hero\ image.png'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 80vh;">
+        <div class="container-fluid d-flex flex-column align-items-center justify-content-between gap-md-5 px-0 ">
+            <nav class="navbar position-fixed w-100 top-0 end-0 py-2 px-1 col-md-12" style="  z-index: 999;">
+                <div class="container-fluid d-flex justify-content-between w-100 row-gap-2 py-2 rounded-3"
+                    style="background-color: rgba(29, 28, 28, 0.137); backdrop-filter: blur(20px); box-shadow: 1px 1px 10px 1px #0000005d; z-index: 999;">
+                    <div class="col-6 col-md-5 col-lg-6">
+                        <div class="col-12 col-lg-6 d-flex justify-content-between align-items-center">
+                            <div class="col-8 col-md-8">
+                                <div class="navbar-brand"><img src="assets/icons/home_icons/Logo_white.png" class="w-75"
+                                        alt="Food zero logo"></div>
+                            </div>
+                            <!-- Use any element to open/show the overlay navigation menu -->
+                            <span onclick="openNav()" class="navbar-dark"><button
+                                    class="navbar-toggler border-1 border-black" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon" style="color: white;"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-5 align-items-center justify-content-between text-white col-5 col-md-6">
+                        <a href="tel:+86 852 346 000" class="text-decoration-none text-white d-none d-md-inline"
+                            style="font-family: 'Inter', sans-serif; text-shadow: 1px 1px 1px rgb(59, 59, 59);">+86 852
+                            346 000</a>
+                        <button class="btn btn-outline-light rounded-0 p-2 py-2 py-md-3 col-md-5 col-12"
+                            style="text-shadow: 1px 1px 1px rgb(59, 59, 59);" type="submit">Reservations</button>
+                    </div>
+                </div>
+            </nav>
+            <!-- The overlay -->
+            <div id="myNav" class="overlay h-100" style="z-index: 999 !important;">
+                <div class="overlayer h-100">
+
+                    <!-- Button to close the overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <!-- Overlay content -->
+                    <div class="h-100">
+                        <div
+                            class="overlay-content d-flex flex-column flex-lg-row align-items-center justify-content-evenly justify-content-lg-between h-100 w-75 m-auto p-0">
+                            <ul>
+                                <li class="text-uppercase fw-bold "><a href="home.html" class="text-white p-0">Home</a>
+                                </li>
+                                <li class="text-uppercase fw-bold"><a href="menu.html" class="text-white p-0">Menu</a>
+                                </li>
+                                <li class="text-uppercase text-warning fw-bold"> Blogs</li>
+                                <div class="d-flex flex-column align-items-start">
+                                    <p class="m-0 text-white fw-bold"><a href="blog.html" class="p-0 text-white fs-5">1
+                                            column</a>
+                                    </p>
+                                    <p class="m-0 fw-bold"><a class="p-0 text-white fs-5" href="blogDouble.html">2
+                                            column</a></p>
+                                    <p class="m-0 text-white fw-bold">Sidebar post</p>
+                                </div>
+                                <li class="text-uppercase fw-bold"><a href="about.html" class="text-white p-0">About</a>
+                                </li>
+                                <li class="text-uppercase fw-bold"><a href="contact.html"
+                                        class="text-white p-0">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex flex-column align-items-start">
+                                <h3 class="pe-5 w-100"
+                                    style="font-size: 30px; color: #f1f1f1;  border-bottom: 3px; border-bottom-style: dotted;">
+                                    Contact</h3>
+                                <div class="w-100 d-flex flex-column">
+                                    <a href="tel:+86 852 346 000"
+                                        class="text-decoration-none text-white fs-5 text-center"
+                                        style="font-family: 'Inter', sans-serif;">+86 852
+                                        346 000</a>
+                                    <a href="mailto:info@foodzero.com" class="fs-5 text-white">info@foodzero.com</a>
+
+                                    <address class="fs-5 text-center text-white">1959 Sepulveda Blvd.
+                                        <br>
+                                        Culver City, CA, 90230
+                                    </address>
+                                    <div class="d-flex">
+                                        <a href="#"><img src="assets/icons/home_icons/Icon_instagram.png"
+                                                alt="instagram icon"></a>
+                                        <a href="#"><img src="assets/icons/home_icons/Icon_twitter.png"
+                                                alt="twitter icon"></a>
+                                        <a href="#"><img src="assets/icons/home_icons/Icon_facebook.png"
+                                                alt="facebook icon"></a>
+                                        <a href="#"><img src="assets/icons/home_icons/Icon_youtube.png"
+                                                alt="YouTube icon"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column ms-lg-auto p-lg-5 p-2 justify-content-between p-3 col-lg-7 col-12 text-lg-start text-center bs-slide-in"
+                style="margin-top: 7rem !important; ">
+                <h1 class=" text-white fs-1 col-12 pt-5 pt-lg-0 fw-bold"
+                    style="font-size: calc(4.5rem + 1.5vw) !important;">
+                    Who We Are</h1>
+                <p class=" text-white fs-5 pt-4" style="letter-spacing: 2%; font-family: 'Rufina', serif !important;">
+                    The most important thing for us is to give you the comfortable dining experience</p>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="p-lg-5 p-3 ">
+        <div class="col-3 col-lg-2 m-auto position-relative">
+            <img loading="lazy" src="assets/images/about_img/Tomato.png" alt="" class="w-100 position-absolute">
+        </div>
+        <div class="py-lg-5">
+
+            <div class="row row-cols-1 row-cols-md-2 pt-5 pb-5">
+                <div
+                    class="d-flex mt-auto flex-wrap justify-content-center justify-content-lg-between align-content-center align-items-lg-end px-lg-5">
+
+                    <h2 class="pt-5 fw-bold" style="font-size: calc(3rem + 1.5vw); color: #000;">Our Menu</h2>
+                    <p class="col-lg-12 fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id
+                        penatibus imperdiet. Turpis egestas ultricies
+                        purus auctor tincidunt lacus nunc.
+                    </p>
+
+                </div>
+                <div class="my-auto">
+                    <img loading="lazy" src="assets/images/about_img/Image (14).png" alt="Chef preparing foods"
+                        class="w-100 shadow reveal-on-scroll slide-up">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Executives head section -->
+    <section>
+        <div class="d-flex justify-content-between px-3 py-5 m-0 row row-cols-1 row-cols-md-2">
+            <div class="col d-flex flex-column justify-content-between">
+                <div>
+                    <h2 class=" fw-bold text-center " style="font-size: calc(1.5rem + 1.5vw); color: #000;">
+                        Resturant Manager</h2>
+                    <p class=" fs-6 text-center ">Carson Hugn</p>
+                    <img src="assets/images/about_img/CEO.png" alt="Man wearing blue coat"
+                        class="w-100 shadow reveal-on-scroll slide-up">
+                </div>
+                <p class="col-lg-8 col-12 text-md-end text-center ms-auto mb-0">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Et in
+                    sed in pellentesque ornare nunc nisl.
+                    Augue habitant
+                    accumsan, ut parturient orci ac etiam congue mi.</p>
+            </div>
+            <div class="col d-flex flex-column-reverse flex-md-column" style="padding-top: 6rem;">
+                <p class="col-lg-8 col-12 text-md-end text-center">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Et in sed in pellentesque
+                    ornare nunc nisl.
+                </p>
+                <div style="padding-top: 10rem;">
+                    <h2 class="pt-5 fw-bold text-center " style="font-size: calc(1.5rem + 1.5vw); color: #000;">
+                        Executive chef</h2>
+                    <p class="fs-6 text-center ">Jane Cooper</p>
+                    <img src="assets/images/about_img/Image (15).png" alt="Image of the Mr. John the executive chef"
+                        class="w-100  shadow reveal-on-scroll zoom-in">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div
+            style="background-image: url('assets/images/about_img/overlay\ image.png'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 80vh!important; background-color: #233000 !important;">
+
+            <div
+                class="d-flex flex-column align-items-center justify-content-center text-center p-5 pb-0 gap-4 col-12 bs-slide-in overlayy">
+                <div>
+                    <h1 class=" text-white fs-1  fw-bold text-center" style="font-size: calc(3rem + 1.5vw) !important;">
+                        It looks delicious</h1>
+                    <p class=" text-white fs-6 text-center"
+                        style="letter-spacing: 2%; font-family: 'Rufina', serif !important;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div>
+                    <video src="assets/videos/mixkit-dish-of-meat-potatoes-and-salad-in-a-restaurant-32457-hd-ready.mp4"
+                        loop controls class="col-md-7 col-12 shadow reveal-on-scroll slide-up">
+
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meal prepartation steps section -->
+    <section>
+        <div class="col-5 ms-auto position-relative">
+            <img loading="lazy" src="assets/images/about_img/rosemary (1).png" alt=""
+                class="col-8 col-md-6 position-absolute end-0">
+        </div>
+        <div class="p-lg-5 p-3">
+            <div class="text-center">
+                <h2 class="pt-5" style="font-size: calc(3rem + 1.5vw); color: #000;">Sophisticated Process</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2 pt-5  pb-5">
+                <div class="my-auto">
+                    <img loading="lazy" src="assets/images/about_img/slice image.png"
+                        alt="Four glass cups on white surface" class="w-100">
+                </div>
+                <div
+                    class="d-flex my-auto flex-wrap justify-content-center justify-content-lg-between align-items-lg-end px-lg-5">
+                    <h2 class=" fw-bold " style="font-size: calc(1.5rem + 1.5vw); color: #000;">
+                        01.Slice</h2>
+                    <p class=" fs-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus
+                        imperdiet. Turpis egestas ultricies
+                        purus auctor tincidunt lacus nunc. Convallis pellentesque quis fringilla sagittis. Egestas in
+                        risus sit nunc nunc, arcu
+                        donec nam etiam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-lg-5 p-3">
+            <div class="text-center">
+                <h2 class="pt-5" style="font-size: calc(3rem + 1.5vw); color: #000;">Sophisticated Process</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2 pt-5  pb-5">
+                <div class="my-auto">
+                    <img loading="lazy" src="assets/images/about_img/slice image.png"
+                        alt="Four glass cups on white surface" class="w-100">
+                </div>
+                <div
+                    class="d-flex my-auto flex-wrap justify-content-center justify-content-lg-between align-items-lg-end px-lg-5">
+                    <h2 class=" fw-bold " style="font-size: calc(1.5rem + 1.5vw); color: #000;">
+                        01.Slice</h2>
+                    <p class=" fs-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus
+                        imperdiet. Turpis egestas ultricies
+                        purus auctor tincidunt lacus nunc. Convallis pellentesque quis fringilla sagittis. Egestas in
+                        risus sit nunc nunc, arcu
+                        donec nam etiam.</p>
+                </div>
+            </div>
+        </div>
+        <div class="p-lg-5 p-3">
+            <div class="text-center">
+                <h2 class="pt-5" style="font-size: calc(3rem + 1.5vw); color: #000;">Sophisticated Process</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2 pt-5  pb-5">
+                <div class="my-auto">
+                    <img loading="lazy" src="assets/images/about_img/slice image.png"
+                        alt="Four glass cups on white surface" class="w-100">
+                </div>
+                <div
+                    class="d-flex my-auto flex-wrap justify-content-center justify-content-lg-between align-items-lg-end px-lg-5">
+                    <h2 class=" fw-bold " style="font-size: calc(1.5rem + 1.5vw); color: #000;">
+                        01.Slice</h2>
+                    <p class=" fs-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus
+                        imperdiet. Turpis egestas ultricies
+                        purus auctor tincidunt lacus nunc. Convallis pellentesque quis fringilla sagittis. Egestas in
+                        risus sit nunc nunc, arcu
+                        donec nam etiam.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Put this in a Bootstrap row deep down on your page -->
+    <div class="container my-5">
+        <div class="row text-center">
+
+            <!-- Card 1: Will slide up from the bottom -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded ">
+                    <h3>Feature One</h3>
+                    <p>This content reveals cleanly when reached.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Will scale/zoom into view -->
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow reveal-on-scroll zoom-in">
+                    <h3>Feature Two</h3>
+                    <p>This content scales up gracefully.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

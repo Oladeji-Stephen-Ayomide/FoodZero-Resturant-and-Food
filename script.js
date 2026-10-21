@@ -117,3 +117,30 @@ function changePage(target) {
 document.addEventListener("DOMContentLoaded", () => {
     changePage(1);
 });
+
+
+// For animation slide in
+document.addEventListener("DOMContentLoaded", () => {
+    const hiddenElements = document.querySelectorAll('.reveal-on-scroll');
+
+    const observerOptions = {
+        root: null,         // Uses the browser viewport
+        rootMargin: '0px',  // No bounding box offsets
+        threshold: 0.15     // Triggers when 15% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // User scrolled DOWN to the element -> Make it visible
+                entry.target.classList.add('visible');
+            } else {
+                // User scrolled PAST or AWAY from the element -> Hide it again
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Watch all target elements
+    hiddenElements.forEach(el => observer.observe(el));
+});

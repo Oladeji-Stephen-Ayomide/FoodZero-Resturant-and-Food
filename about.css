@@ -1,0 +1,95 @@
+/* ==========================================
+   ANIMATION 1: SLIDE-IN FROM LEFT ON LOAD
+   ========================================== */
+.bs-slide-in {
+    /* 
+      Runs the 'bootstrapSlideIn' keyframe once for 1.2 seconds.
+      'forwards' ensures the image stays at 100% opacity when done.
+    */
+    animation: bootstrapSlideIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    opacity: 0; /* Invisible before the animation kicks off */
+}
+
+@keyframes bootstrapSlideIn {
+    0% {
+        transform: translateX(-120px); /* Starts shifted to the left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);      /* Returns to its exact Bootstrap grid position */
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   ANIMATION 2: CONTINUOUS FLOATING EFFECT
+   ========================================== */
+.bs-floating {
+    /* 
+      Loops the 'bootstrapFloat' keyframe endlessly.
+      'alternate' smooths the loop by playing it forward, then backward.
+    */
+    animation: bootstrapFloat 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes bootstrapFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-18px); /* Gently drifts upward */
+    }
+}
+
+/* Optional: Pause the floating movement when the user hovers over it */
+.bs-floating:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+/* Core helper to hide elements initially */
+.reveal-on-scroll {
+    opacity: 0;
+    will-change: transform, opacity;
+
+    /* 
+       Transition when exiting (scrolling away): 
+       Slightly faster (0.5s) so it hides cleanly.
+    */
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+/* Specific Variation 1: Slide Up & Down */
+.reveal-on-scroll.slide-up {
+    transform: translateY(60px);
+}
+
+/* Specific Variation 2: Zoom In & Out */
+.reveal-on-scroll.zoom-in {
+    transform: scale(0.85);
+}
+
+/* ==========================================
+   THE TRIGGER STATE (Active when visible)
+   ========================================== */
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+
+    /* 
+       Transition when entering (scrolling into view): 
+       Smooth, elegant easing curve (0.8s).
+    */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease-out;
+}
+
+/* Accessibility: Turn off for users who prefer no motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
