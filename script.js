@@ -174,3 +174,70 @@ document.addEventListener("DOMContentLoaded", () => {
     // Track the new items
     cascadeElements.forEach(el => cascadeObserver.observe(el));
 });
+
+
+
+// FOR ALERT
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Initialize the Bootstrap toast element
+    const toastElement = document.getElementById('toastAlert');
+    const bootstrapToast = new bootstrap.Toast(toastElement);
+
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const submitButton = document.getElementById('submitBtn');
+
+        // 1. Instantly change button state for immediate feedback
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Processing...
+    `;
+
+        // 2. Trigger Bootstrap's native popover slide-up
+        bootstrapToast.show();
+
+        // 3. Reset the button after the toast disappears (3 seconds)
+        setTimeout(function () {
+            submitButton.disabled = false;
+            submitButton.innerText = "Book Now";
+        }, 3000);
+    });
+
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Initialize the Bootstrap toast element
+    const toastElement = document.getElementById('toastalert');
+    const bootstrapToast = new bootstrap.Toast(toastElement);
+
+    document.getElementById('myFormm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const submitButton = document.getElementById('subscribeBtn');
+
+        // 1. Instantly change button state for immediate feedback
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Processing...
+    `;
+
+        // 2. Trigger Bootstrap's native popover slide-up
+        bootstrapToast.show();
+
+        // 3. Reset the button after the toast disappears (3 seconds)
+        setTimeout(function () {
+            submitButton.disabled = false;
+            submitButton.innerText = "Subscribe";
+        }, 3000);
+    });
+
+});
+
+

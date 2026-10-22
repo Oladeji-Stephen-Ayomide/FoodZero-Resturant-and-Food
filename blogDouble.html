@@ -977,15 +977,14 @@
 
     <!-- footer -->
     <footer style="background-color: #233000;" class="py-lg-5">
-        <div class="d-flex flex-column container-fluid p-lg-5 p-3">
-            <div class="d-flex justify-content-center justify-content-lg-between flex-wrap py-4 mt-5"
+        <div class="d-flex flex-column container-fluid  px-lg-5 p-2">
+            <div class="d-flex justify-content-center justify-content-lg-between flex-wrap mt-5"
                 style="border-bottom: 3px; border-bottom-style: dotted; border-color: white;">
                 <div class="fs-1 text-center text-white col-12 col-lg-3">
-                    <h1 class="fs-1 text-white" style="font-size: 5rem !important;">Food Zero.</h1>
+                    <h1 class="fs-1 text-white" style="font-size: 3rem !important;">Food Zero.</h1>
                 </div>
                 <div class="d-flex flex-column gap-4 col-12 col-lg-3">
-                    <h3 class="text-center fs-1 fw-bold" style="color: #f1f1f1;"
-                        style="font-family: 'Lato', sans-serif;">
+                    <h3 class="text-center fs-1 fw-bold" style="color: #f1f1f1;" style="font-family: 'Lato', sans-serif;">
                         Contact</h3>
                     <div class="w-100 d-flex flex-column gap-4">
                         <div class="text-center"><a href="tel:+86 852 346 000"
@@ -1002,35 +1001,47 @@
                 </div>
                 <div class="text-white text-center text-lg-start  d-flex flex-column gap-4 col-12 col-lg-5">
                     <h3 class="text-center fs-1 fw-bold" style="color: #f1f1f1;">Never Miss a Recipe</h3>
-                    <form class="text-white d-flex flex-column">
+                    <form class="text-white d-flex flex-column" id="myFormm">
                         <div class="col-12 d-flex gap-4">
                             <input name="E-mail" type="email" placeholder="Email Address" required
-                                class="py-4 ps-4 col-7 bg-transparent border-0"
+                                class="py-4 ps-4 col-7 bg-transparent border-0 text-white"
                                 style="border: 2px #fff solid !important; ">
                             <button type="submit" class="py-3 col-4 fs-5 border-0 text-white"
-                                style="background-color: #5E6600 !important;">Subscribe</button>
+                                style="background-color: #5E6600 !important;" id="subscribeBtn">Subscribe</button>
                         </div>
-                        <small class="text-light pt-3 fs-6" style="font-family: 'Lato', sans-serif;">Join
-                            our
-                            subscribers and
+    
+                        <!-- Bootstrap Toast Container (Positioned Bottom-Center) -->
+                        <div class="toast-container position-fixed rounded-5 bottom-0 start-50 translate-middle-x p-3"
+                            style="z-index: 1055222;">
+                            <div id="toastalert" class="toast align-items-center rounded-5 text-white bg-black border-0"
+                                role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                                <div class="d-flex align-items-center ">
+                                    <div class="toast-body text-center w-100 fs-6 py-2 px-4">
+                                        🎉 Subscription successfully!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-light pt-3" style="font-family: 'Lato', sans-serif;">Join our subscribers and
                             get best recipe delivered each
                             week!</small>
                     </form>
-
+    
                 </div>
             </div>
-            <div class="d-flex justify-content-between text-white container-fluid p-5">
-                <small class="fs-5" style="font-family: 'Lato', sans-serif;">© 2020 Zero Inc. All rights
+            <div class="d-flex justify-content-md-between text-white container-fluid px-lg-5 p-2 gap-3">
+                <small class="fs-6" style="font-family: 'Lato', sans-serif;">© 2020 Zero Inc. All rights
                     Reserved</small>
-
+    
                 <div class="d-flex gap-3">
-                    <a href="#"><img src="assets/icons/home_icons/004-instagram.png" alt="Instagram icon"></a>
-                    <a href="#"><img src="assets/icons/home_icons/003-twitter.png" alt="Twitter icon"></a>
                     <a href="#"><img src="assets/icons/home_icons/001-facebook.png" alt="Facebook icon"></a>
+                    <a href="#"><img src="assets/icons/home_icons/003-twitter.png" alt="Twitter icon"></a>
+                    <a href="#"><img src="assets/icons/home_icons/004-instagram.png" alt="Instagram icon"></a>
                     <a href="#"><img src="assets/icons/home_icons/Icon_youtube (1).png" alt="YouTube icon"></a>
                 </div>
-
+    
             </div>
         </div>
     </footer>
 </body>
+</html>
